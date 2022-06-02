@@ -156,7 +156,7 @@ class LivewireCalendar extends Component
     public function goToCurrentMonth()
     {
         $today = Carbon::today();
-        $this->goToMonth($today->format("F"), $today->format("Y"));
+        $this->goToMonth((int)$today->format("Y"), $today->format("F"));
 
         $this->calculateGridStartsEnds();
     }
